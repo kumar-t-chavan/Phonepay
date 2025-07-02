@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhonePe Style Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #5a01a7;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .card input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .card button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #5a01a7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .card button:active {
+      background-color: #3e006f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PhonePe Pay</h1>
+
+  <div class="card">
+    <h2>Send Money</h2>
+    <input type="text" id="username" placeholder="Enter Username" />
+    <input type="number" id="amount" placeholder="Enter Amount ₹" />
+    <button onclick="pay()">Pay Now</button>
+  </div>
+
+  <script>
+    function pay() {
+      let user = document.getElementById("username").value.trim().toLowerCase();
+      let amount = document.getElementById("amount").value;
+
+      if (amount > 0) {
+        alert("✅ ₹" + amount + " paid successfully to.... " + user);
+        location.assign("index1.html");
+      } else {
+        alert("❌ Payment failed. Invalid details.");
+        location.assign("money-fail.html");
+      }
+    }
+  </script>
+
+</body>
+</html>

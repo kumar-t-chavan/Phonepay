@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Success</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: gray;
+      font-family: Arial, sans-serif;
+    }
+
+    .bap {
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      place-items: center;
+    }
+
+    .main {
+      display: grid;
+      place-items: center;
+    }
+
+    .main-div {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: rotatePulse 2s infinite ease-in-out;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: white;
+      animation: pulse 1.5s ease-in-out infinite, counterRotate 2s infinite linear;
+    }
+
+   
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+     
+      }
+      50% {
+        transform: scale(2);
+      
+      }
+    }
+
+   
+  </style>
+</head>
+<body>
+  <div class="bap">
+    <div class="main">
+      <div class="main-div">
+        <h1>✅</h1>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
